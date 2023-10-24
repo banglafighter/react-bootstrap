@@ -1,7 +1,6 @@
 import Select from "./Select";
 import React from "react";
-import PaginationSpec, {PaginationProps} from "@pfo/pf-boot-spec/boot/spec/PaginationSpec";
-import {BootstrapUIState} from "react-boot-spec";
+import {BootstrapUIState, PaginationProps, PaginationSpec} from "react-boot-spec";
 
 interface Props extends PaginationProps {
     siblingCount?: number

@@ -1,6 +1,5 @@
 import CommonTask from "./common/common-task";
-import InputSpec, {InputProps} from "@pfo/pf-boot-spec/boot/spec/InputSpec";
-import {BootstrapUIState} from "react-boot-spec";
+import {BootstrapUIState, InputProps, InputSpec} from "react-boot-spec";
 import {CommonUtil} from "react-boot-spec";
 
 

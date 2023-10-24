@@ -1,4 +1,3 @@
-import PFBSReactComponent from "react-boot-spec";
 import Container from "../../react/Container";
 import Table from "../../react/table/Table";
 import TableHead from "../../react/table/TableHead";
@@ -7,9 +6,10 @@ import TableHeadCell from "../../react/table/TableHeadCell";
 import TableBody from "../../react/table/TableBody";
 import TableCell from "../../react/table/TableCell";
 import Pagination from "../../react/Pagination";
+import {BootstrapReactComponent} from "react-boot-spec";
 
 
-export default class TableComponent extends PFBSReactComponent<any, any> {
+export default class TableComponent extends BootstrapReactComponent<any, any> {
 
 
     render() {

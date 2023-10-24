@@ -1,7 +1,6 @@
 import React from "react";
 import {InputViewHelper} from "./common/input-view-helper";
-import DropdownSpec, {DropdownProps} from "@pfo/pf-boot-spec/boot/spec/DropdownSpec";
-import {BootstrapUIState} from "react-boot-spec";
+import {BootstrapUIState, DropdownProps, DropdownSpec} from "react-boot-spec";
 
 interface Props extends DropdownProps {
 

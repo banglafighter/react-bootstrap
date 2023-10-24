@@ -1,9 +1,8 @@
 import React from "react";
 import Input from "./Input";
 import {InputViewHelper} from "./common/input-view-helper";
-import TextFieldSpec, {TextFieldProps} from "@pfo/pf-boot-spec/boot/spec/TextFieldSpec";
-import {BootstrapUIState} from "react-boot-spec";
-import {InputType} from "@pfo/pf-boot-spec/boot/spec/InputSpec";
+import {BootstrapUIState, TextFieldProps, TextFieldSpec} from "react-boot-spec";
+import {InputType} from "react-boot-spec/boot/spec/InputSpec";
 
 
 interface Props extends TextFieldProps {

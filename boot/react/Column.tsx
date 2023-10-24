@@ -1,6 +1,5 @@
 import CommonTask from "./common/common-task";
-import ColumnSpec, {ColumnProps} from "@pfo/pf-boot-spec/boot/spec/ColumnSpec";
-import {BootstrapUIState} from "react-boot-spec";
+import {BootstrapUIState, ColumnProps, ColumnSpec} from "react-boot-spec";
 import {CommonUtil} from "react-boot-spec";
 
 interface Props extends ColumnProps {

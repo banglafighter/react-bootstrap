@@ -1,5 +1,4 @@
-import {BootstrapUIState} from "react-boot-spec";
-import ToastSpec, {ToastProps} from "@pfo/pf-boot-spec/boot/spec/ToastSpec";
+import {BootstrapUIState, ToastProps, ToastSpec} from "react-boot-spec";
 
 
 interface Props extends ToastProps {

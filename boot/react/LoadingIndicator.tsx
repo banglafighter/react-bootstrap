@@ -1,5 +1,4 @@
-import LoadingIndicatorSpec, {LoadingIndicatorProps} from "@pfo/pf-boot-spec/boot/spec/LoadingIndicatorSpec";
-import {BootstrapUIState} from "react-boot-spec";
+import {BootstrapUIState, LoadingIndicatorProps, LoadingIndicatorSpec} from "react-boot-spec";
 
 interface Props extends LoadingIndicatorProps {
 

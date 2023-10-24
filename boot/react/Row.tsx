@@ -1,5 +1,4 @@
-import RowSpec, {RowProps} from "@pfo/pf-boot-spec/boot/spec/RowSpec";
-import {BootstrapUIState} from "react-boot-spec";
+import {BootstrapUIState, RowProps, RowSpec} from "react-boot-spec";
 import {CommonUtil} from "react-boot-spec";
 
 

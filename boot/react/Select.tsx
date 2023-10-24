@@ -1,8 +1,7 @@
 import ReactSelect from "react-select";
 import React from "react";
 import {InputViewHelper} from "./common/input-view-helper";
-import SelectSpec, {SelectProps} from "@pfo/pf-boot-spec/boot/spec/SelectSpec";
-import {BootstrapUIState} from "react-boot-spec";
+import {BootstrapUIState, SelectProps, SelectSpec} from "react-boot-spec";
 
 interface Props extends SelectProps {
     wrapperClass?: string

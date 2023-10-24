@@ -1,4 +1,3 @@
-import PFBSReactComponent from "react-boot-spec";
 import Container from "../../react/Container";
 import Card from "../../react/card/Card";
 import CardHeader from "../../react/card/CardHeader";
@@ -8,9 +7,10 @@ import Column from "../../react/Column";
 import TextField from "../../react/TextField";
 import CardFooter from "../../react/card/CardFooter";
 import Select from "../../react/Select";
+import {BootstrapReactComponent} from "react-boot-spec";
 
 
-export default class FormComponent extends PFBSReactComponent<any, any> {
+export default class FormComponent extends BootstrapReactComponent<any, any> {
 
 
     render() {

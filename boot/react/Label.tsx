@@ -1,5 +1,4 @@
-import LabelSpec, {LabelProps} from "@pfo/pf-boot-spec/boot/spec/LabelSpec";
-import {BootstrapUIState} from "react-boot-spec";
+import {BootstrapUIState, LabelProps, LabelSpec} from "react-boot-spec";
 import {CommonUtil} from "react-boot-spec";
 
 

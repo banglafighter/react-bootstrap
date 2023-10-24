@@ -1,4 +1,4 @@
-import PFBSReactComponent from "react-boot-spec";
+import {BootstrapReactComponent} from "react-boot-spec";
 import Dialog from "../../react/dialog/Dialog";
 import DialogContent from "../../react/dialog/DialogContent";
 import DialogFooter from "../../react/dialog/DialogFooter";
@@ -8,7 +8,7 @@ class State {
     isOpenDialog: boolean = false
 }
 
-export default class DialogComponent extends PFBSReactComponent<any, State> {
+export default class DialogComponent extends BootstrapReactComponent<any, State> {
 
     state: State = new State();
 

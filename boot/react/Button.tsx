@@ -1,6 +1,5 @@
 import CommonTask from "./common/common-task";
-import ButtonSpec, {ButtonProps} from "@pfo/pf-boot-spec/boot/spec/ButtonSpec";
-import {BootstrapUIState} from "react-boot-spec";
+import {BootstrapUIState, ButtonProps, ButtonSpec} from "react-boot-spec";
 import {CommonUtil} from "react-boot-spec";
 
 
