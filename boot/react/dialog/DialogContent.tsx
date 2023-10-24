@@ -1,5 +1,4 @@
-import DialogContentSpec, {DialogContentProps} from "@pfo/pf-boot-spec/boot/spec/dialog/DialogContentSpec";
-import {BootstrapUIState} from "react-boot-spec";
+import {BootstrapUIState, DialogContentProps, DialogContentSpec} from "react-boot-spec";
 
 
 interface Props extends DialogContentProps {

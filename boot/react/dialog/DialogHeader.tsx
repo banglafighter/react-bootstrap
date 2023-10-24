@@ -1,5 +1,4 @@
-import DialogHeaderSpec, {DialogHeaderProps} from "@pfo/pf-boot-spec/boot/spec/dialog/DialogHeaderSpec";
-import {BootstrapUIState} from "react-boot-spec";
+import {BootstrapUIState, DialogHeaderProps, DialogHeaderSpec} from "react-boot-spec";
 
 
 interface Props extends DialogHeaderProps {

@@ -1,12 +1,8 @@
 import TableHead from "./TableHead";
 import TableRow from "./TableRow";
 import TableHeadCell from "./TableHeadCell";
-import React from "react";
-import DynamicTableHeadSpec, {
-    DynamicTableHeadColumn,
-    DynamicTableHeadProps
-} from "@pfo/pf-boot-spec/boot/spec/table/DynamicTableHeadSpec";
-import {BootstrapUIState} from "react-boot-spec";
+import {React} from "react-rapid-app";
+import {BootstrapUIState, DynamicTableHeadColumn, DynamicTableHeadProps, DynamicTableHeadSpec} from "react-boot-spec";
 
 interface Props extends DynamicTableHeadProps {
 

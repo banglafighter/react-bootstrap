@@ -1,5 +1,4 @@
-import DialogSpec, {DialogProps} from "@pfo/pf-boot-spec/boot/spec/dialog/DialogSpec";
-import {BootstrapUIState} from "react-boot-spec";
+import {BootstrapUIState, DialogProps, DialogSpec} from "react-boot-spec";
 import {CommonUtil} from "react-boot-spec";
 
 const style = {

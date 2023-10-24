@@ -1,5 +1,4 @@
-import DialogFooterSpec, {DialogFooterProps} from "@pfo/pf-boot-spec/boot/spec/dialog/DialogFooterSpec";
-import {BootstrapUIState} from "react-boot-spec";
+import {BootstrapUIState, DialogFooterProps, DialogFooterSpec} from "react-boot-spec";
 
 
 interface Props extends DialogFooterProps {

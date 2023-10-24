@@ -1,5 +1,4 @@
-import CardContentSpec, {CardContentProps} from "@pfo/pf-boot-spec/boot/spec/card/CardContentSpec";
-import {BootstrapUIState} from "react-boot-spec";
+import {BootstrapUIState, CardContentProps, CardContentSpec} from "react-boot-spec";
 import {CommonUtil} from "react-boot-spec";
 
 

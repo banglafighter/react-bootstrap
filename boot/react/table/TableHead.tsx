@@ -1,5 +1,4 @@
-import TableHeadSpec, {TableHeadProps} from "@pfo/pf-boot-spec/boot/spec/table/TableHeadSpec";
-import {BootstrapUIState} from "react-boot-spec";
+import {BootstrapUIState, TableHeadProps, TableHeadSpec} from "react-boot-spec";
 import {CommonUtil} from "react-boot-spec";
 
 

@@ -1,5 +1,4 @@
-import CardHeaderSpec, {CardHeaderProps} from "@pfo/pf-boot-spec/boot/spec/card/CardHeaderSpec";
-import {BootstrapUIState} from "react-boot-spec";
+import {BootstrapUIState, CardHeaderProps, CardHeaderSpec} from "react-boot-spec";
 import {CommonUtil} from "react-boot-spec";
 
 interface Props extends CardHeaderProps {

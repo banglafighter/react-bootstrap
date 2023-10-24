@@ -1,5 +1,4 @@
-import TableHeadCellSpec, {SortDirection, TableHeadCellProps} from "@pfo/pf-boot-spec/boot/spec/table/TableHeadCellSpec";
-import {BootstrapUIState} from "react-boot-spec";
+import {BootstrapUIState, SortDirection, TableHeadCellProps, TableHeadCellSpec} from "react-boot-spec";
 import {CommonUtil} from "react-boot-spec";
 
 

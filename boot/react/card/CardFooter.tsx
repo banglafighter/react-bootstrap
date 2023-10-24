@@ -1,5 +1,4 @@
-import CardFooterSpec, {CardFooterProps} from "@pfo/pf-boot-spec/boot/spec/card/CardFooterSpec";
-import {BootstrapUIState} from "react-boot-spec";
+import {BootstrapUIState, CardFooterProps, CardFooterSpec} from "react-boot-spec";
 import {CommonUtil} from "react-boot-spec";
 
 
