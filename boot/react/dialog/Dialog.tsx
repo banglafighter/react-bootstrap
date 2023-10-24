@@ -1,6 +1,6 @@
 import DialogSpec, {DialogProps} from "@pfo/pf-boot-spec/boot/spec/dialog/DialogSpec";
 import {BootstrapUIState} from "react-boot-spec";
-import CommonUtil from "@pfo/pf-boot-spec/boot/spec/common/common-util";
+import {CommonUtil} from "react-boot-spec";
 
 const style = {
     displayBlock: {

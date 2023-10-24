@@ -1,5 +1,5 @@
 import {BootstrapUIState} from "react-boot-spec";
-import CommonUtil from "@pfo/pf-boot-spec/boot/spec/common/common-util";
+import {CommonUtil} from "react-boot-spec";
 import AccordionSpec, {AccordionProps} from "@pfo/pf-boot-spec/boot/spec/AccordionSpec";
 
 

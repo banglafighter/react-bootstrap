@@ -1,6 +1,6 @@
 import TableRowSpec, {TableRowProps} from "@pfo/pf-boot-spec/boot/spec/table/TableRowSpec";
 import {BootstrapUIState} from "react-boot-spec";
-import CommonUtil from "@pfo/pf-boot-spec/boot/spec/common/common-util";
+import {CommonUtil} from "react-boot-spec";
 
 
 interface Props extends TableRowProps {

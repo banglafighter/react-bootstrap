@@ -1,6 +1,6 @@
-import ContainerSpec, {ContainerProps} from "@pfo/pf-boot-spec/boot/spec/ContainerSpec";
+import {ContainerProps, ContainerSpec} from "react-boot-spec";
 import {BootstrapUIState} from "react-boot-spec";
-import CommonUtil from "@pfo/pf-boot-spec/boot/spec/common/common-util";
+import {CommonUtil} from "react-boot-spec";
 
 interface Props extends ContainerProps {
 

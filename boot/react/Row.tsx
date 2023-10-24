@@ -1,6 +1,6 @@
 import RowSpec, {RowProps} from "@pfo/pf-boot-spec/boot/spec/RowSpec";
 import {BootstrapUIState} from "react-boot-spec";
-import CommonUtil from "@pfo/pf-boot-spec/boot/spec/common/common-util";
+import {CommonUtil} from "react-boot-spec";
 
 
 interface Props extends RowProps {
