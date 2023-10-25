@@ -61,7 +61,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'PF React Bootstrap',
+            title: 'Rapid React Bootstrap',
             chunksSortMode: 'none',
             template: './public/index.html',
             favicon: './public/favicon.ico',
