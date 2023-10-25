@@ -13,9 +13,24 @@ import CardHeader from "./boot/react/card/CardHeader";
 import CardContent from "./boot/react/card/CardContent";
 import {BootstrapIconHelper} from "./boot/react/helper/icon-helper";
 import Dropdown from "./boot/react/Dropdown";
-
+import Table from "./boot/react/table/Table";
+import DynamicTableHead from "./boot/react/table/DynamicTableHead";
+import TableBody from "./boot/react/table/TableBody";
+import TableRow from "./boot/react/table/TableRow";
+import TableCell from "./boot/react/table/TableCell";
+import Pagination from "./boot/react/Pagination";
+import Select from "react-rapid-bootstrap/boot/react/Select";
+import Accordion from "react-rapid-bootstrap/boot/react/Accordion";
 
 export {
+    Accordion,
+    Select,
+    Table,
+    DynamicTableHead,
+    TableBody,
+    TableRow,
+    TableCell,
+    Pagination,
     BootstrapIconHelper,
     Dropdown,
     CardContent,
