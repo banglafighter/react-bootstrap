@@ -22,6 +22,7 @@ import Pagination from "./boot/react/Pagination";
 import Select from "./boot/react/Select";
 import Accordion from "./boot/react/Accordion";
 import {InputViewHelper} from "./boot/react/common/input-view-helper";
+import SelectCommon from "./boot/react/common/select-common";
 
 export {
     Accordion,
@@ -48,4 +49,5 @@ export {
     DialogFooter,
     Container,
     InputViewHelper,
+    SelectCommon,
 }
