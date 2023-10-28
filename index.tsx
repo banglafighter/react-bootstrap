@@ -19,8 +19,9 @@ import TableBody from "./boot/react/table/TableBody";
 import TableRow from "./boot/react/table/TableRow";
 import TableCell from "./boot/react/table/TableCell";
 import Pagination from "./boot/react/Pagination";
-import Select from "react-rapid-bootstrap/boot/react/Select";
-import Accordion from "react-rapid-bootstrap/boot/react/Accordion";
+import Select from "./boot/react/Select";
+import Accordion from "./boot/react/Accordion";
+import {InputViewHelper} from "./boot/react/common/input-view-helper";
 
 export {
     Accordion,
@@ -46,4 +47,5 @@ export {
     DialogContent,
     DialogFooter,
     Container,
+    InputViewHelper,
 }
