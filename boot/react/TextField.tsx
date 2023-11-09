@@ -178,6 +178,9 @@ export default class TextField extends TextFieldSpec<Props, State> {
 
     render() {
         const _props = this.props;
+        if (_props.isHideInput) {
+            return ""
+        }
         let content = (
             <>
                 {this.getInput()}
