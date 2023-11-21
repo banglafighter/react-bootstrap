@@ -36,7 +36,7 @@ export default class Accordion extends AccordionSpec<Props, State> {
                  className={CommonUtil.addClassName(_props, defaultClass)}>
                 {_props.items.map((accordion: any, index: any) => (
                     <div key={index} className="accordion-item">
-                        <span className="accordion-header cursor-pointer">
+                        <div className="accordion-header cursor-pointer">
                             <div
                                 {...CommonUtil.addId(accordion.header)}
                                 className={CommonUtil.addClassName(accordion.header, "accordion-button" + (accordion.isOpen ? "" : " collapsed"))}
@@ -44,7 +44,7 @@ export default class Accordion extends AccordionSpec<Props, State> {
                             >
                                 {accordion.header.content}
                             </div>
-                        </span>
+                        </div>
                         <div
                             className={CommonUtil.addClassName(accordion.body, "accordion-collapse collapse" + (accordion.isOpen ? " show" : "") )}
                             {...CommonUtil.addId(accordion.body, "toggle" + index + randomId)}
