@@ -16,7 +16,7 @@ export default class TableCell extends TableCellSpec<Props, State> {
 
     render() {
         const _props = this.props;
-        return (<td {...CommonUtil.addId(_props)} className={CommonUtil.addClassName(_props, "")}>{_props.children}</td>);
+        return (<td {...CommonUtil.addAllowedAttrs(_props)} {...CommonUtil.addId(_props)} className={CommonUtil.addClassName(_props, "")}>{_props.children}</td>);
     }
 
 }
