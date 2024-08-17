@@ -1,7 +1,7 @@
 {
   "name": "react-rapid-bootstrap",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "dependencies": {
     "react-boot-spec": "^0.0.1",
     "react-rapid-app": "^0.0.1",
