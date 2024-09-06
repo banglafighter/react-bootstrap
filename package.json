@@ -19,8 +19,6 @@
     ]
   },
   "devDependencies": {
-    "@swc/core": "^1.7.22",
-    "tsup": "^8.2.4",
     "file-loader": "^6.2.0",
     "css-loader": "^6.4.0",
     "html-webpack-plugin": "^5.4.0",
