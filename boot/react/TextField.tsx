@@ -117,6 +117,12 @@ export default class TextField extends TextFieldSpec<Props, State> {
     private setBeforeAfter(input: any, before: any, after: any, wrapperExtraClass: string = "") {
         const _props = this.props;
         wrapperExtraClass = InputViewHelper.concatClass(InputViewHelper.getClass(_props.inputGroupClass), wrapperExtraClass)
+        if (before == undefined) {
+            before = ""
+        }
+        if (after == undefined) {
+            after = ""
+        }
         return (
             <div className={wrapperExtraClass}>
                 {before}
@@ -160,6 +166,7 @@ export default class TextField extends TextFieldSpec<Props, State> {
                 input = this.getPasswordInput(input)
                 return this.wrapContent(label, input)
             default:
+                input = this.setBeforeAfter(input, _props.beforeInput, _props.afterInput)
                 return this.wrapContent(label, input)
         }
     }
