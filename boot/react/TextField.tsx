@@ -117,11 +117,8 @@ export default class TextField extends TextFieldSpec<Props, State> {
     private setBeforeAfter(input: any, before: any, after: any, wrapperExtraClass: string = "") {
         const _props = this.props;
         wrapperExtraClass = InputViewHelper.concatClass(InputViewHelper.getClass(_props.inputGroupClass), wrapperExtraClass)
-        if (before == undefined) {
-            before = ""
-        }
-        if (after == undefined) {
-            after = ""
+        if (!before && !after) {
+            return input
         }
         return (
             <div className={wrapperExtraClass}>
