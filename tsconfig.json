@@ -21,6 +21,7 @@
     "outDir": "dist"
   },
   "include": [
+    "index.tsx",
     "boot",
     "tdef"
   ],
