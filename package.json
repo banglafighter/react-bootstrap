@@ -4,7 +4,7 @@
   "private": false,
   "dependencies": {
     "react-boot-spec": "^0.0.8",
-    "react-select": "^5.1.0"
+    "react-select": "^5.8.1"
   },
   "scripts": {
     "start-react-boot": "webpack-dev-server",
