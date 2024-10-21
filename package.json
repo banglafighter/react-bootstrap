@@ -3,7 +3,7 @@
   "version": "0.0.4",
   "private": false,
   "dependencies": {
-    "react-boot-spec": "^0.0.7",
+    "react-boot-spec": "^0.0.8",
     "react-select": "^5.1.0"
   },
   "scripts": {
