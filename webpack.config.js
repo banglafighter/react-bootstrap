@@ -1,5 +1,6 @@
 const path = require('path');
-
+const CopyPlugin = require("copy-webpack-plugin");
+let exportDir = "dist"
 module.exports = {
     entry: {
         main: './index.tsx'
@@ -37,12 +38,27 @@ module.exports = {
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.jsx']
     },
+    plugins: [
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, "boot", "react", "assets", "css"),
+                    to: path.resolve(__dirname, exportDir, "boot", "react", "assets", "css")
+                },
+                {
+                    from: path.resolve(__dirname, "boot", "react", "assets", "fonts"),
+                    to: path.resolve(__dirname, exportDir, "boot", "react", "assets", "fonts")
+                },
+            ],
+        }),
+    ],
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, exportDir),
         filename: 'index.js',
         library: 'ReactRapidBootstrap',
         libraryTarget: 'umd', // Universal Module Definition for compatibility
         globalObject: 'this',
+        clean: true
     },
 
 };
