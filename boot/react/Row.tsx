@@ -6,8 +6,7 @@ interface Props extends RowProps {
 
 }
 
-class State implements BootstrapUIState {
-}
+class State implements BootstrapUIState {}
 
 export default class Row extends RowSpec<Props, State> {
 

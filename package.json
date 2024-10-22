@@ -3,11 +3,12 @@
   "version": "0.0.9",
   "private": false,
   "dependencies": {
-    "react-boot-spec": "^0.0.9",
+    "react-boot-spec": "^0.0.10",
     "react-select": "^5.8.1"
   },
   "scripts": {
     "start-react-boot": "webpack-dev-server",
+    "build": "webpack --mode=production",
     "watch": "tsc -w",
     "prepublishOnly": "node prepublish.js && tsc",
     "release": "cross-env RELEASE_MODE=true np --no-tests --branch release-test"
@@ -25,7 +26,7 @@
     "html-webpack-plugin": "^5.4.0",
     "np": "^10.0.7",
     "react-dom": "^18.3.1",
-    "react-rapid-app": "^0.0.9",
+    "react-rapid-app": "^0.0.11",
     "style-loader": "^3.3.0",
     "ts-loader": "^9.2.6",
     "typescript": "^5.6.3",
@@ -34,9 +35,9 @@
     "webpack-dev-server": "^4.3.1"
   },
   "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "/dist"
   ]
 }

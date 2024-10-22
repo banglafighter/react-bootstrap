@@ -1,15 +1,14 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        main: './boot/demo/index.tsx'
+        main: './index.tsx'
     },
     mode: 'development',
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
+                test: /\.(ts|tsx)$/,
                 use: [
                     {
                         loader: 'ts-loader',
@@ -20,7 +19,7 @@ module.exports = {
                         },
                     },
                 ],
-                exclude: /(node_modules|build)/
+                exclude: /(node_modules|dist)/
             },
             {
                 test: /\.css$/i,
@@ -36,44 +35,14 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: [ '.tsx', '.ts', '.js', '.jsx' ]
+        extensions: ['.tsx', '.ts', '.js', '.jsx']
     },
     output: {
-        path: path.resolve(__dirname, 'build'),
-        filename: '[name].[hash:8].js',
-        chunkFilename: '[id].[hash:8].js',
-        publicPath: '/'
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'index.js',
+        library: 'ReactRapidBootstrap',
+        libraryTarget: 'umd', // Universal Module Definition for compatibility
+        globalObject: 'this',
     },
-    optimization: {
-        splitChunks: {
-            cacheGroups: {
-                default: false,
-                vendors: {
-                    reuseExistingChunk: true
-                },
-                vendor: {
-                    name: 'vendor',
-                    chunks: 'all',
-                    test: /node_modules/
-                }
-            }
-        }
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: 'Rapid React Bootstrap',
-            chunksSortMode: 'none',
-            template: './public/index.html',
-            favicon: './public/favicon.ico',
-            minify: true
-        })
-    ],
 
-    devServer: {
-        port: 1240,
-        historyApiFallback: {
-            disableDotRule: true
-        },
-        open: true
-    }
 };
