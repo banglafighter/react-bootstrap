@@ -31,19 +31,21 @@ export default class DynamicTableHead extends DynamicTableHeadSpec<Props, State>
                 <TableRow>
                     {columns.map(
                         (column: DynamicTableHeadColumn, key: any) => {
-                            return (
-                                <TableHeadCell
-                                    style={column.isActionColumn ? {width: "100px", textAlign: "center"} : {}}
-                                    currentSortFieldName={_props.currentSortFieldName}
-                                    key={key}
-                                    onClickSort={_props.onClickSort}
-                                    id={column.id}
-                                    className={column.className}
-                                    isSortAble={column.isSortAble}
-                                    fieldName={column.fieldName}>
-                                    {column.displayName}
-                                </TableHeadCell>
-                            )
+                            if (!column.isIgnoreHeader) {
+                                return (
+                                    <TableHeadCell
+                                        style={column.isActionColumn ? {width: "100px", textAlign: "center"} : {}}
+                                        currentSortFieldName={_props.currentSortFieldName}
+                                        key={key}
+                                        onClickSort={_props.onClickSort}
+                                        id={column.id}
+                                        className={column.className}
+                                        isSortAble={column.isSortAble}
+                                        fieldName={column.fieldName}>
+                                        {column.displayName}
+                                    </TableHeadCell>
+                                )
+                            }
                         })
                     }
                 </TableRow>
