@@ -7,18 +7,28 @@ interface Props extends DropdownProps {
 }
 
 class State implements BootstrapUIState {
+    wrapperPlaceholderName: any = ""
 }
 
 export default class Dropdown extends DropdownSpec<Props, State> {
+
+    state: State = new State();
 
     static defaultProps = {
         wrapperTagName: "ul",
         itemTagName: "li",
     }
 
+    componentDidMount() {
+        this.setState({wrapperPlaceholderName: this.props.wrapperPlaceholder})
+    }
+
     private onClickItem(item: any, key: any) {
         if (this.props.itemOnClick) {
             this.props.itemOnClick(item, key, this.props.itemList)
+        }
+        if (this.props.enableSelectValue) {
+            this.setState({wrapperPlaceholderName: item})
         }
     }
 
@@ -47,7 +57,7 @@ export default class Dropdown extends DropdownSpec<Props, State> {
         return (
             <div className="dropdown">
                 <span data-bs-toggle="dropdown">
-                    {wrapperPlaceholder}
+                    {_this.state.wrapperPlaceholderName}
                 </span>
                 <WrapperTagName className={className} id={this.props.wrapperId}>
                     {itemList.map(
