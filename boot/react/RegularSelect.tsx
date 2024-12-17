@@ -1,4 +1,3 @@
-import ReactSelect from "react-select";
 import React from "react";
 import {InputViewHelper} from "./common/input-view-helper";
 import {BootstrapUIState, SelectSpec, SelectProps as SelectPropsSpec} from "react-boot-spec";
@@ -50,7 +49,6 @@ export default class RegularSelect extends SelectSpec<SelectProps, RegularSelect
         const _this = this;
 
         let klass = InputViewHelper.getClass(_props.className, "form-select")
-        klass = InputViewHelper.concatClass(klass, "form-select")
         klass = InputViewHelper.addValidationClass(_props, klass)
 
         let htmlSelect: any = (
