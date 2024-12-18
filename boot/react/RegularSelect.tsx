@@ -63,11 +63,18 @@ export default class RegularSelect extends SelectSpec<SelectProps, RegularSelect
                 }}
             >
                 {_this.getPlaceholder()}
-                {_this.state.options.map((data: any, index: any) => (
-                    <option key={index} value={data.value} selected={data.value === _this.state.value}>
-                        {data.label}
-                    </option>
-                ))}
+                {_this.state.options.map((data: any, index: any) => {
+                    let selectedData: any = _this.state.value
+                    let selectedValue: any
+                    if (selectedData) {
+                        selectedValue = selectedData.value
+                    }
+                    return (
+                        <option key={index} value={data.value} selected={data.value === selectedValue}>
+                            {data.label}
+                        </option>
+                    )
+                })}
             </select>
         )
 
