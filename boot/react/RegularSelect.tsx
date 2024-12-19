@@ -6,6 +6,7 @@ import SelectCommon from "./common/select-common";
 export interface SelectProps extends SelectPropsSpec {
     wrapperClass?: string
     addWrapperClass?: string
+    onLoadSelectedValue?: (value: any) => void
 }
 
 export class RegularSelectState implements BootstrapUIState {
@@ -44,12 +45,18 @@ export default class RegularSelect extends SelectSpec<SelectProps, RegularSelect
         return ""
     }
 
+    getSelectedRawData(event: any, options: any) {
+        let dataIndex: any = event.target[event.target.selectedIndex].getAttribute('data-index')
+        return options[dataIndex]
+    }
+
     render() {
         const _props = this.props;
         const _this = this;
 
         let klass = InputViewHelper.getClass(_props.className, "form-select")
         klass = InputViewHelper.addValidationClass(_props, klass)
+        let currentSelectedValue: any
 
         let htmlSelect: any = (
             <select
@@ -59,7 +66,8 @@ export default class RegularSelect extends SelectSpec<SelectProps, RegularSelect
                 multiple={_props.isMulti}
                 id={_props.id}
                 onChange={(event: any) => {
-                    SelectCommon.onChange(event.target, _this)
+                    let eventData: any = _this.getSelectedRawData(event, _this.state.options)
+                    SelectCommon.onChange(eventData, _this)
                 }}
             >
                 {_this.getPlaceholder()}
@@ -69,14 +77,23 @@ export default class RegularSelect extends SelectSpec<SelectProps, RegularSelect
                     if (selectedData) {
                         selectedValue = selectedData.value
                     }
+                    let isSelected: boolean = false
+                    if (data.value === selectedValue) {
+                        isSelected = true
+                        currentSelectedValue = data
+                    }
                     return (
-                        <option key={index} value={data.value} selected={data.value === selectedValue}>
+                        <option data-index={index} key={index} value={data.value} selected={isSelected}>
                             {data.label}
                         </option>
                     )
                 })}
             </select>
         )
+
+        if (_props.onLoadSelectedValue && currentSelectedValue) {
+            _props.onLoadSelectedValue(currentSelectedValue)
+        }
 
         return SelectCommon.wrapContent(htmlSelect, _this)
     }
