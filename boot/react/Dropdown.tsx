@@ -23,6 +23,12 @@ export default class Dropdown extends DropdownSpec<Props, State> {
         this.setState({wrapperPlaceholderName: this.props.wrapperPlaceholder})
     }
 
+    componentDidUpdate(prevProps: Props) {
+        if (this.props.wrapperPlaceholder !== prevProps.wrapperPlaceholder) {
+            this.setState({wrapperPlaceholderName: this.props.wrapperPlaceholder})
+        }
+    }
+
     private onClickItem(item: any, key: any) {
         if (this.props.itemOnClick) {
             this.props.itemOnClick(item, key, this.props.itemList)
