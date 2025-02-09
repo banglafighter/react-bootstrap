@@ -8,6 +8,7 @@ interface Props extends InputProps {}
 class State implements BootstrapUIState {}
 
 export default class Input extends InputSpec<Props, State> {
+    private inputReference: any
 
     static defaultProps = {
         type: "text",
@@ -26,7 +27,12 @@ export default class Input extends InputSpec<Props, State> {
         return klass
     }
 
+    getInputRef() {
+        return this.inputReference
+    }
+
     render() {
+        const _this = this;
         let TagName = "input";
         const _props = this.props;
         let type = this.props.type
@@ -40,6 +46,9 @@ export default class Input extends InputSpec<Props, State> {
             {...CommonUtil.removePropsItem(_props, ['viewSize'])}
             className={klasses}
             type={type}
+            ref={(ref: any) => {
+                _this.inputReference = ref
+            }}
         />);
     }
 

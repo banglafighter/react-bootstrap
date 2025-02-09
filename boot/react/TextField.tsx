@@ -14,7 +14,7 @@ class State implements BootstrapUIState {
 }
 
 export default class TextField extends TextFieldSpec<Props, State> {
-
+    private inputReference: any
     static defaultProps = {
         wrapperClass: "mb-3",
         inputGroupClass: "input-group"
@@ -78,9 +78,19 @@ export default class TextField extends TextFieldSpec<Props, State> {
         }
     }
 
+    getInputRef() {
+        if (this.inputReference) {
+            return this.inputReference.getInputRef()
+        }
+    }
+
     private setInputAttributes(className: any = "", defaultValue: any, inputType?: InputType, onChange?: any) {
         const _props = this.props;
+        const _this = this;
         return <Input
+            ref={(ref: any) => {
+                _this.inputReference = ref
+            }}
             defaultValue={defaultValue}
             type={this.state.isShowPassword && inputType === "password" ? "text" : inputType}
             viewSize={_props.viewSize}
