@@ -16,6 +16,7 @@ export class SelectState implements BootstrapUIState {
 
 
 export default class Select extends SelectSpec<SelectProps, SelectState> {
+    private selectReference: any
 
     state: SelectState = new SelectState();
 
@@ -35,6 +36,12 @@ export default class Select extends SelectSpec<SelectProps, SelectState> {
     componentDidUpdate(prevProps: SelectProps) {
         if (prevProps.options !== this.props.options || prevProps.value !== this.props.value) {
             SelectCommon.loadOption(this);
+        }
+    }
+
+    getSelectRef() {
+        if (this.selectReference) {
+            return this.selectReference
         }
     }
 
@@ -62,6 +69,9 @@ export default class Select extends SelectSpec<SelectProps, SelectState> {
                 placeholder={_props.placeholder}
                 name={_props.name}
                 menuPlacement={"auto"}
+                ref={(ref: any) => {
+                    _this.selectReference = ref
+                }}
             />
         );
         return SelectCommon.wrapContent(select, _this)
